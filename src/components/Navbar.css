@@ -1,0 +1,14 @@
+/* Add this to your global CSS file */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+  
+  /* Optional: Add this if you want to prevent content from jumping when scrolling */
+  main {
+    padding-top: 5rem;
+  }

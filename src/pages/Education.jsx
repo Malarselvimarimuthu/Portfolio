@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGraduationCap, FaSchool, FaUserGraduate } from 'react-icons/fa';
 import './Education.css'
+import Divider from './../components/GradeintDivider';
 
 const Education = () => {
   const educationData = [
@@ -59,6 +60,7 @@ const Education = () => {
 return (
     <div className="min-h-screen bg-[#0B0B1E] text-white py-20 px-4 md:px-8">
       {/* Header */}
+      
       <div className="text-center mb-24">
         <h1 className="text-5xl md:text-7xl font-bold mb-8 text-[#64CCC5]">
           Education Journey
@@ -140,6 +142,7 @@ return (
           </div>
         ))}
       </div>
+      <Divider/>
     </div>
 );
 };

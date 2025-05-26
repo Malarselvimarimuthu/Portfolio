@@ -15,7 +15,7 @@ const AboutSection = () => {
     "🚀 Building robust backend systems",
     "☁️ Cloud-first thinking",
     "🎭 Express through public speaking",
-    "🎶 Code with rhythm, live with melody",
+    "🚀 Code with rhythm, live with melody",
     "😊 Keeping a positive attitude"
   ];
 
@@ -23,31 +23,31 @@ const AboutSection = () => {
     {
       icon: "📧",
       label: "Email",
-      link: "mailto:youremail@example.com",
+      link: "https://mail.google.com/mail/?view=cm&fs=1&to=malarmarimuthu2005@gmail.com",
       color: "#EA4335"
     },
     {
       icon: "💼",
       label: "LinkedIn",
-      link: "https://linkedin.com/in/yourprofile",
+      link: "https://www.linkedin.com/in/malarselvi-m/",
       color: "#0A66C2"
     },
     {
       icon: "💻",
       label: "GitHub",
-      link: "https://github.com/yourprofile",
+      link: "https://github.com/Malarselvimarimuthu/",
       color: "#2DBA4E"
     },
     {
       icon: "🏆",
       label: "LeetCode",
-      link: "https://leetcode.com/yourprofile",
+      link: "https://leetcode.com/u/Malarselvi/",
       color: "#FFA116"
     },
     {
       icon: "📄",
       label: "Resume",
-      link: "https://drive.google.com/your-resume-link",
+      link: "https://drive.google.com/file/d/1UiHaIs9vA-E4W3yCNAXKQT-hHNCEgM8x/view?usp=sharing",
       color: "#00A0DC"
     }
   ];

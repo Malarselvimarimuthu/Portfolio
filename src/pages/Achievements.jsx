@@ -6,6 +6,7 @@ import './Achievements.css'
 import codingPrize1 from '../images/CodingPrize1.jpg';
 import speech from '../images/speach.JPG';
 import poem from '../images/poem.jpg';
+import Divider from './../components/GradeintDivider';
 
 const Achievements = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -229,6 +230,7 @@ const Achievements = () => {
           ))}
         </div>
       </div>
+      <Divider/>
     </div>
   );
 };

@@ -1,26 +1,28 @@
 import React from 'react';
 import { FaAws, FaCode, FaCalendar, FaBuilding, FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
+import Divider from './../components/GradeintDivider';
+import aws from '../images/aws.png';
 
 const ProfessionalDevelopment = () => {
   const professionalData = {
     internship: {
       title: "Web Developer Intern",
-      company: "Company Name",
-      duration: "June 2023 - August 2023",
+      company: "Dr.Syringe Branding and Consultancies",
+      duration: "March 2024 - June 2024",
       description: "Worked on developing and maintaining web applications using modern technologies and best practices.",
-      technologies: ["React.js", "Node.js", "MongoDB", "Express.js", "AWS"],
+      technologies: ["React with TypeScript", "Redux", "MySQL", "Java", "SpringBoot"],
       keyAchievements: [
-        "Developed responsive web applications with React.js",
-        "Implemented RESTful APIs using Node.js and Express",
+        "Developed responsive web applications with React and TypeScript",
+        "Implemented RESTful APIs using SpringBoot",
         "Collaborated with senior developers on production projects",
-        "Participated in agile development processes"
+        "Lead the team for a month during internship"
       ]
     },
     certification: {
       title: "AWS Certified Cloud Practitioner",
-      issueDate: "September 2023",
-      validUntil: "September 2026",
-      credentialId: "ABC123XYZ",
+      issueDate: "February 15, 2025",
+      validUntil: "February 15, 2028",
+      credentialId: "AWS04746422",
       skills: [
         "Cloud Computing Concepts",
         "AWS Core Services",
@@ -128,12 +130,17 @@ const ProfessionalDevelopment = () => {
           </div>
 
           {/* Verify Button */}
-          <button className="mt-6 px-4 py-2 flex items-center gap-2 text-sm
-                         bg-[#64CCC5]/10 rounded-full text-[#64CCC5] 
-                         hover:bg-[#64CCC5]/20 transition-colors">
+          <a
+            href="https://www.credly.com/badges/ac1fd57c-700d-4e47-92ef-69f3650105a5" // <-- Replace with your actual link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 px-4 py-2 flex items-center gap-2 text-sm
+                      bg-[#64CCC5]/10 rounded-full text-[#64CCC5] 
+                      hover:bg-[#64CCC5]/20 transition-colors"
+          >
             <FaExternalLinkAlt size={12} />
             Verify Certification
-          </button>
+          </a>
 
           {/* Skills */}
           <div className="mt-6">
@@ -149,16 +156,17 @@ const ProfessionalDevelopment = () => {
           </div>
 
           {/* AWS Badge */}
-          <div className="mt-8 flex justify-center">
+          <div className="mt-6 flex justify-center">
             <img 
-              src="/path-to-aws-badge.png" 
+              src={aws}
               alt="AWS Certification Badge" 
-              className="w-32 h-32 object-contain"
+              className="w-102 h-102 object-contain"
             />
           </div>
         </div>
 
       </div>
+      <Divider/>
     </div>
   );
 };

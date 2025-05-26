@@ -1,6 +1,7 @@
 import './Home.css';
 import profileImage from '../images/PassportImage1.jpg';
 import { useState, useEffect } from 'react';
+import Divider from './../components/GradeintDivider';
 
 export default function Home() {
   const [text, setText] = useState('');
@@ -53,6 +54,7 @@ export default function Home() {
   ];
   
   return (
+    
     <div className="min-h-screen bg-black flex items-center justify-center overflow-hidden">
       <div className="relative w-full h-screen">
         {/* Top Animated Text */}
@@ -97,18 +99,22 @@ export default function Home() {
 
         {/* Bottom Text Content */}
         <div className="absolute w-full text-center bottom-20 md:bottom-10 z-10 px-4">
+       
           <h2 className="text-xl md:text-2xl font-semibold text-white mb-4">
             Full Stack Developer | Cloud Enthusiast
           </h2>
           <div className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto">
             <p className="mb-2">
               Interested in exploring DevOps and Cloud Technologies
+             
             </p>
-          
+            
           </div>
+          
         </div>
+        
       </div>
- 
+            
     </div>
     
   );

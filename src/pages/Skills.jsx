@@ -60,30 +60,29 @@ const Skills = () => {
       {/* Half Circles */}
       <div className="relative flex justify-center items-end mt-[250px] md:mt-[450px] mb-16">
         {/* Frontend - Largest */}
-        <div className={`absolute bottom-0 ${isMobile ? 'w-[320px] h-[160px]' : 'w-[800px] h-[400px]'} 
-                        border-t-2 border-purple-500/80 rounded-t-full`}>
-          {skillsData.frontend.map((skill, index) => {
+          <div className={`absolute bottom-0 ${isMobile ? 'w-[320px] h-[160px]' : 'w-[800px] h-[400px]'} 
+                    border-t-2 border-purple-500/80 rounded-t-full`}>
+        {skillsData.frontend.map((skill, index) => {
             const positions = getPositions(skillsData.frontend.length, 390);
             return (
-              <div
-                key={index}
-                className="group absolute"
-                style={{
-                  left: `calc(50% + ${positions[index].x}px)`,
-                  bottom: `${positions[index].y}px`,
-                  transform: 'translate(-50%, 50%)'
-                }}
-              >
-                <div className={`${isMobile ? 'w-8 h-8' : 'w-16 h-16'} 
-                                bg-white rounded-full p-2 hover:bg-gray-700 
-                                transition-all duration-300 hover:scale-110 shadow-md`}>
-                  <img src={skill.icon} alt={skill.name} className="w-full h-full" />
+                <div
+                    key={index}
+                    className="absolute"
+                    style={{
+                        left: `calc(50% + ${positions[index].x}px)`,
+                        bottom: `${positions[index].y}px`,
+                        transform: 'translate(-50%, 50%)'
+                    }}
+                >
+                    <div className={`${isMobile ? 'w-8 h-8' : 'w-16 h-16'} 
+                                    bg-white rounded-full p-2 shadow-md
+                                    hover:bg-gray-800`}>
+                        <img src={skill.icon} alt={skill.name} className="w-full h-full" />
+                    </div>
                 </div>
-               
-              </div>
             );
-          })}
-        </div>
+        })}
+    </div>
 
         {/* Backend - Middle */}
         <div className={`absolute bottom-0 ${isMobile ? 'w-[240px] h-[120px]' : 'w-[600px] h-[300px]'} 
@@ -93,16 +92,16 @@ const Skills = () => {
             return (
               <div
                 key={index}
-                className="group absolute"
+                className="absolute"
                 style={{
                   left: `calc(50% + ${positions[index].x}px)`,
                   bottom: `${positions[index].y}px`,
                   transform: 'translate(-50%, 50%)'
                 }}
               >
-                <div className={`${isMobile ? 'w-8 h-8' : 'w-16 h-16'} 
-                                bg-white rounded-full p-2 hover:bg-gray-700 
-                                transition-all duration-300 hover:scale-110 shadow-md`}>
+          <div className={`${isMobile ? 'w-8 h-8' : 'w-16 h-16'} 
+                          bg-white rounded-full p-2 shadow-md
+                          hover:bg-gray-800`}>
                   <img src={skill.icon} alt={skill.name} className="w-full h-full" />
                 </div>
       
@@ -119,16 +118,16 @@ const Skills = () => {
             return (
               <div
                 key={index}
-                className="group absolute"
+                className="absolute"
                 style={{
                   left: `calc(50% + ${positions[index].x}px)`,
                   bottom: `${positions[index].y}px`,
                   transform: 'translate(-50%, 50%)'
                 }}
               >
-                <div className={`${isMobile ? 'w-8 h-8' : 'w-16 h-16'} 
-                                bg-white rounded-full p-2 hover:bg-gray-700 
-                                transition-all duration-300 hover:scale-110 shadow-md`}>
+              <div className={`${isMobile ? 'w-8 h-8' : 'w-16 h-16'} 
+                bg-white rounded-full p-2 shadow-md
+                hover:bg-gray-800`}>      
                   <img src={skill.icon} alt={skill.name} className="w-full h-full" />
                 </div>
               

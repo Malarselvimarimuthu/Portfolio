@@ -1,26 +1,19 @@
-// components/GradientDivider.jsx
+// components/Divider.jsx
 
-const GradientDivider = () => {
-    return (
-      <div className="w-full h-[2px] relative overflow-hidden my-8">
-        <div className="absolute w-full h-full"
-          style={{
-            background: 'linear-gradient(90deg, transparent 0%, #7FFFD4 20%, #FFFFFF 50%, #7FFFD4 80%, transparent 100%)',
-            animation: 'shimmer 3s infinite linear'
-          }}
-        />
-        <style jsx>{`
-          @keyframes shimmer {
-            0% {
-              transform: translateX(-100%);
-            }
-            100% {
-              transform: translateX(100%);
-            }
-          }
-        `}</style>
-      </div>
-    );
-  };
-  
-  export default GradientDivider;
+import React from 'react';
+
+const Divider = () => {
+  return (
+<div className="w-full flex justify-center my-16">
+      <div 
+        className="w-[80%] h-[1px]"
+        style={{
+          background: 'linear-gradient(90deg, transparent, #64CCC5, #ffffff, #64CCC5, transparent)',
+          boxShadow: '0 0 10px rgba(100, 204, 197, 0.5), 0 0 20px rgba(255, 255, 255, 0.3)'
+        }}
+      ></div>
+    </div>
+  );
+};
+
+export default Divider;
