@@ -6,6 +6,7 @@ import Project2 from './../images/project2.png';
 import Project3 from './../images/project3.png';
 import Project4 from './../images/project4.png';
 import Project5 from './../images/project5.jpg';
+import Project6 from './../images/project6.jpg';
 
 const Projects = () => {
   const projects = [
@@ -29,7 +30,7 @@ const Projects = () => {
       description: "A full-featured e-commerce platform for customers and admins, built with React and Firebase.",
       image: Project2,
       technologies: ["React (TSX)", "Tailwind CSS", "Firebase","Lottie Icons"],
-      liveLink: "https://project-demo.comhttps://firstpick-database-b30a7.web.app/",
+      liveLink: "https://firstpick-database-b30a7.web.app/",
       githubLink: "https://github.com/Malarselvimarimuthu/firstpick-project",
       features: [
         "User Module: Signup, Login, Profile, and Order History",
@@ -59,7 +60,6 @@ const Projects = () => {
       githubLink: "https://github.com/Malarselvimarimuthu/photoHd",
       features: [
         "Responsive layout that adapts to different screen sizes and devices",
-        "Gallery section with a lightbox feature to display the photos in full size",
         "Footer section with social media icons and links",
         "CI/CD pipeline setup using Jenkins",
         "GitHub repository integrated with Jenkins via Poll SCM for automatic deployment"
@@ -78,17 +78,20 @@ const Projects = () => {
       ]
     },
     {
-      title: "Chat Room – Client to Client Communication",
-      description: "A multithreaded chat room application built using Python socket programming for real-time communication over TCP.",
-      image:Project5,
-      technologies: ["Python", "Socket Programming", "Multithreading", "Computer Networks"],
-      githubLink: "https://github.com/Malarselvimarimuthu/travel-preview/",
+      title: "Patient Details Management System",
+      description: "A backend RESTful API system developed using Java and Spring Boot to manage patient information, supporting full CRUD operations with secure data handling.",
+      image: Project6, 
+      technologies: ["Java", "Spring Boot", "MySQL", "Maven", "Postman", "REST API"],
+      githubLink: "https://github.com/Malarselvimarimuthu/PaitentDetails", 
       features: [
-        "Real-time communication using TCP socket connections",
-        "Used basic concepts of OSI Layer (Transport Layer - TCP)",
-        "Client-to-client message flow through centralized server"
+        "RESTful API with endpoints for all CRUD operations",
+        "Secure data access using Spring Boot best practices",
+        "Integrated with MySQL for persistent storage",
+        "Tested using Postman for API verification"
       ]
-    },
+    }
+
+   
     
   ];
 
