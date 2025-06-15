@@ -99,7 +99,7 @@ const Achievements = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#0B0B1E] text-white py-10 md:py-20">
+    <div className="bg-[#0B0B1E] text-white py-10 ">
       {/* Header */}
       <div className="text-center mb-12 md:mb-24 px-4">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-8 text-[#64CCC5]">

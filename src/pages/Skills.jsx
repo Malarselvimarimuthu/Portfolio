@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { colors } from './../components/colors';
+import Divider from './../components/GradeintDivider';
 const Skills = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -55,7 +56,7 @@ const Skills = () => {
   };
 
   return (
-    <div className="bg-[#0B0B1E] md:min-h-screen  text-white px-4 overflow-hidden flex flex-col items-center justify-start" >
+    <div className="bg-[#0B0B1E]   text-white px-4 overflow-hidden flex flex-col items-center justify-start" >
       
       {/* Half Circles */}
       <div className="relative flex justify-center items-end mt-[250px] md:mt-[450px] mb-16">
@@ -138,7 +139,7 @@ const Skills = () => {
       </div>
 
       {/* My Skills Text Centered Below */}
-      <div className="text-center mb-20">
+      <div className="text-center mb-2">
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
           <span className="text-[#64CCC5]">
             Expertice In
@@ -148,6 +149,7 @@ const Skills = () => {
           Crafting digital experiences with modern technologies
         </p>
       </div>
+      <Divider/>
     </div>
   );
 };

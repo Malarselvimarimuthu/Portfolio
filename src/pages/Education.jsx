@@ -8,7 +8,7 @@ const Education = () => {
     {
       year: "2022 - 2026",
       degree: "Bachelor of Engineering",
-      major: "Computer Science & Engineering (CGPA: 8.40)",
+      major: "Computer Science & Engineering (CGPA: 8.36)",
       institution: "Kongu Engineering College",
       description: "Currently pursuing a degree with a focus on software development and cloud computing.",
       mainSubjects: [
@@ -58,7 +58,7 @@ const Education = () => {
 
 
 return (
-    <div className="min-h-screen bg-[#0B0B1E] text-white py-20 px-4 md:px-8">
+    <div className="bg-[#0B0B1E] text-white py-20 px-4 md:px-8">
       {/* Header */}
       
       <div className="text-center mb-24">

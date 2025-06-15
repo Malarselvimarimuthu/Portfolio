@@ -209,7 +209,7 @@ const AboutSection = () => {
           fontSize: '1.125rem',
           color: colors.textPrimary
         }}>
-          When I'm not deploying code, I'm either preparing for my next tech talk or creating the perfect coding playlist! 🎧
+          When I'm not deploying code, I'm either preparing for my next talk or creating the perfect coding playlist! 🎧
         </p>
       </div>
     </div>
