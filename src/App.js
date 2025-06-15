@@ -12,7 +12,7 @@ import CustomCursor from './components/customCursor';
 import './App.css';
 function App() {
   return (
-    <div className="App cursor-none">
+    <div className="App min-h-screen bg-[#0B0B1E] cursor-none ">
       <CustomCursor />
       <Navbar />
 

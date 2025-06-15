@@ -4,7 +4,7 @@ import React from 'react';
 
 const Divider = () => {
   return (
-<div className="w-full flex justify-center my-16">
+<div className="w-full flex justify-center my-10">
       <div 
         className="w-[80%] h-[1px]"
         style={{

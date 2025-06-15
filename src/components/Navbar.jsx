@@ -1,52 +1,28 @@
 import React, { useState } from 'react';
+import Scrollspy from 'react-scrollspy';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      // Smooth scroll with custom duration and timing
-      window.scrollTo({
-        top: element.offsetTop - 80, // 80px offset for navbar height
-        behavior: 'smooth',
-        duration: 1000 // milliseconds
-      });
-    }
-    setIsMenuOpen(false);
-  };
 
   // For even smoother custom scrolling behavior
-  const smoothScroll = (target, duration) => {
-    const targetPosition = target.offsetTop - 80;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
+ const smoothScroll = (targetId) => {
+  const element = document.getElementById(targetId);
+  if (element) {
+    const yOffset = -80; // adjust for your fixed navbar height
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-    function animation(currentTime) {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const run = ease(timeElapsed, startPosition, distance, duration);
-      window.scrollTo(0, run);
-      if (timeElapsed < duration) requestAnimationFrame(animation);
-    }
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth',
+    });
+  }
+};
 
-    // Easing function for smoother animation
-    function ease(t, b, c, d) {
-      t /= d / 2; 
-      if (t < 1) return c / 2 * t * t + b;
-      t--;
-      return -c / 2 * (t * (t - 2) - 1) + b;
-    }
 
-    requestAnimationFrame(animation);
-  };
 
   const handleNavClick = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      smoothScroll(element, 1000); // 1000ms = 1 second duration
-    }
+    smoothScroll(sectionId);
     setIsMenuOpen(false);
   };
 
@@ -55,7 +31,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-[#64CCC5]">Your Logo</span>
+            <span className="text-2xl font-bold text-[#64CCC5]">&lt;/&gt; MS PortFolio</span>
           </div>
           
           {/* Mobile menu button */}
@@ -77,19 +53,25 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center">
-            <div className="md:ml-6 md:flex md:space-x-8">
-              {['Home', 'Skills', 'Projects', 'Education', 'Achievements', 'Experience', 'About'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => handleNavClick(item.toLowerCase())}
-                  className="text-[#64CCC5] hover:text-white px-3 py-2 rounded-md text-xl font-medium transition-colors duration-200 cursor-none"
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
-          </div>
+        <div className="hidden md:flex items-center">
+        <Scrollspy
+          items={['home', 'skills', 'projects', 'education', 'achievements', 'experience', 'about']}
+          currentClassName="text-white"
+          offset={-100}
+          className="md:ml-6 md:flex md:space-x-8"
+          componentTag="div"
+        >
+          {['Home', 'Skills', 'Projects', 'Education', 'Achievements', 'Experience', 'About'].map((item) => (
+            <button
+              key={item}
+              onClick={() => handleNavClick(item.toLowerCase())}
+              className="px-3 py-2 rounded-md text-xl font-medium transition-colors duration-200 cursor-none text-[#64CCC5] hover:text-white"
+            >
+              {item}
+            </button>
+          ))}
+        </Scrollspy>
+      </div>
         </div>
 
         {/* Mobile Menu */}

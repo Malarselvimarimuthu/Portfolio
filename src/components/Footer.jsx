@@ -3,7 +3,8 @@
 export default function Footer() {
     return (
       <footer className="bg-gray-800 text-white p-4 text-center">
-        <p>&copy; 2023 My Portfolio</p>
+        <p>&copy; 2025 My Portfolio | Developed by Malarselvi </p>
+        
       </footer>
     );
   }
